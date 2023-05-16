@@ -1,0 +1,23 @@
+{% macro project_card( name , description , image) %}
+
+<div class="single_project">
+
+    <div class="image_holder">
+        <img src="static/all_pics/{{image}}" alt="">
+        
+        <button class="view">VIEW PROJECT</button>
+    </div>
+
+
+
+    <div class="details">   
+        <h3>{{name.upper()}}</h3>
+        <!-- {{description}} -->
+        <!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ad recusandae fuga? Culpa laboriosam at asperiores -->
+        <!-- porro quia, est eveniet. -->
+    </div>
+
+</div>
+
+
+{% endmacro %}

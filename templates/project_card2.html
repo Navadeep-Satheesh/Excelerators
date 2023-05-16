@@ -1,0 +1,22 @@
+{% macro project_card2( project ) %}
+
+<div class="project_card">
+
+    <div class="image_holder">
+        <img src="static/all_pics/{{ project[2] }}" alt="">
+    </div>
+    
+
+    <div class="details">
+
+        <h3 class = "title">{{ project[1].upper() }}</h3>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At quisquam ipsam et fugiat
+            laboriosam quae totam dolore nesciunt excepturi, adipisci molestiae iste animi minima natus?</p>
+
+        <a href="" class="view">VEIW PROJECT</a>
+    </div>
+
+
+</div>
+
+{% endmacro %}

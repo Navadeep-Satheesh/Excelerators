@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/project_card2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/projects2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/variables.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% from 'navbar.html' import navbar %}
+    {% from 'project_card2.html' import project_card2 %}
+    {{ navbar() }}
+
+    <img src="{{ url_for('static' , filename = 'res/tire_mark.png') }}" alt="" id="tire_mark">
+
+    <h1 class="heading" id = "projects_heading">OUR PROJECTS</h1>
+
+    <div id="all_projects" class = "projects">
+
+        
+        {% for project in completed %}
+
+        {{ project_card2( project = project ) }}
+
+        {% endfor %}
+
+    </div>
+
+    <h1 class="heading" id="upcoming">UPCOMING PROJECTS</h1>
+
+    <div id="upcoming" class="projects">
+
+        
+        {% for project in completed %}
+        {{ project_card2( project = project ) }}
+        {% endfor %}
+        
+    </div>
+
+</body>
+
+</html>

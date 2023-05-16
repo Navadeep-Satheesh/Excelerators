@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/navbar.css') }}">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/members.css') }}">
+    <!-- <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/member_card.css') }}"> -->
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/variables.css') }}">
+    <title>Excelarators</title>
+</head>
+
+<body>
+
+    {% from 'navbar.html' import navbar %}
+    {% from 'member_card.html' import member_card %}
+    {{ navbar() }}
+
+    <div id = "top_image">
+
+        
+
+        <h1>OUR TEAM</h1>
+
+    </div>
+
+    
+
+    <div id="execom_members" class="members">
+
+        <!-- <h3>EXECOM</h3> -->
+
+
+        <div class="members_grid">
+        {% for member in execom_members %}
+
+        <div class="singleMember" data-aos ="fade-up" data-aos-duration="1000" data-aos-once="true">
+            <div class="profile_pic">
+                <img src="" alt="">
+            </div>
+            <div class="details">
+                <h3>name department</h3>
+                <h3>position</h3>
+            </div>
+        </div>
+
+            
+        {% endfor %}
+            
+        </div>
+    </div>
+
+    <div id="other_members" class="members">
+
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

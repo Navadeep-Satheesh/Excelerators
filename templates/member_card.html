@@ -1,0 +1,16 @@
+{% macro member_card( name , position , semester , department ) %}
+
+<div class="single_member">
+    <!-- <img class = "profile_pic" src="" alt=""> -->
+    <div class = "profile_pic"></div>
+    <div class="details">
+        <h3 class="name">NAME</h3>
+        <h4 class="position">{{position}}</h4>
+        <h4 class="sem_and_dept">{{semester}} {{department}}</h4>
+        
+    </div>
+</div>
+
+
+
+{% endmacro %}

@@ -1,0 +1,94 @@
+.single_project{
+
+    height: 60vh;
+    border-radius: 10px;
+    /* width: 25vw; */
+    /* background-color: rgb(255, 0, 0); */
+    color: rgb(255, 255, 255);
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    overflow: hidden;
+    
+    
+}
+
+.image_holder{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    height: 50vh;
+    border: 20px;
+    position: relative;
+    /* top: 0px; */
+    /* bottom: 0px; */
+ 
+}
+
+.view{
+    background-color: red;
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 50%;
+    margin: auto;
+    display: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+
+}
+
+
+.single_project img{
+    width: 100%;
+    transition: 0.5s;
+    transform: translate(-50% , -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+.single_project img:hover{
+    
+    width: 110%;
+    /* height: 120%; */
+}
+
+.single_project img:hover ~ .view{
+    transition:  0.5s;
+    display: flex;
+}
+
+.view:hover{
+    display: flex;
+    color: red;
+    background-color: white;
+}
+
+.view:hover ~ img {
+    display: flex;
+    width: 110%;
+
+}
+
+.single_project img:hover + .details {
+    color: red;
+}
+
+.single_project h3{
+    font-size: 1.3em;
+    text-align: center;
+   
+}
+
+.details{
+    margin: 20px;
+}

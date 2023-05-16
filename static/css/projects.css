@@ -1,0 +1,93 @@
+body{
+    background-color: var(--background);
+    /* background-image: url("../all_pics/image2.jpg"); */
+
+
+}
+
+.heading{
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: var(--heading);
+    font-size: 3rem;
+    font-weight: bolder;
+   
+    
+}
+
+#tire_mark{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 98vw;
+    z-index: -7;
+    
+}
+
+.projects{
+    margin:  5vh auto ;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(600px , 650px));
+    width: 80vw;
+    /* background-color: red; */
+
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+}
+
+
+.project{
+    width: 70vw;
+    height: 60vh;
+    background-color: rgb(62, 62, 62);
+    color: white;
+    border-radius: 20px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.project_image{
+    height: 100%;
+}
+
+.project_summary{
+    margin:  auto;
+    font-size: 20px;
+    width: 35%;
+    font-family: sans-serif;
+   
+    
+
+}
+.project_summary h3{
+    /* background-color: red; */
+    text-align: center;
+    margin-bottom: 20px;
+
+    
+}
+
+@media (max-width: 100vh){
+
+
+
+}
+
+/* @media (max-width: 120vh){ */
+    /* .project{ */
+        /* flex-direction: column; */
+        /* height: max-content; */
+    /* } */
+/*  */
+    /* .project_summary{ */
+        /* width: 80%; */
+        /* margin: 10%; */
+    /* } */
+/*  */
+/* } */

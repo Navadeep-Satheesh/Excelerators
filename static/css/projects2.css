@@ -1,0 +1,80 @@
+.projects{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    
+}
+
+html{
+    width: 100%;
+}
+body{
+
+    /* overflow-x: hidden; */
+    width: 100%;
+    color: white;
+}
+
+#tire_mark{
+    width: 70vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+
+#projects_heading{
+
+    margin-top: 15vh;
+
+}
+
+.heading{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+}
+
+.projects :nth-child(even){
+    /* background-color: red; */
+}
+
+
+.projects :nth-child(even) .image_holder {
+  
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: 0px;
+    right: 0px;
+}   
+.projects :nth-child(even) .details{
+    left: unset;
+    right: 35vw;
+}
+
+.projects :nth-child(even) .view{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+@media( max-width : 100vh  ){
+
+    .projects :nth-child(even) .details {
+        right: 0px;
+        left:0px;
+    }
+    .projects :nth-child(even) .image_holder{
+    
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    #tire_mark{
+        width: 100vw;
+    }
+}

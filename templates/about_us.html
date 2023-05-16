@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="{{ url_for( 'static' , filename = 'css/about_us.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for( 'static' , filename = 'css/navbar.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for( 'static' , filename = 'css/variables.css' ) }}">
+    <title>About Us</title>
+</head>
+
+<body>
+
+    {% from 'navbar.html' import navbar %}
+    {{ navbar() }}
+
+
+
+
+
+    <div id="description" class ="box" >
+
+        <h3 class="heading">ABOUT US</h3>
+        <div id="top_image" class="image_div">
+            <img src="{{url_for('static', filename = 'all_pics/gokart20213.jpg' )}}" alt="" class="image">
+        </div>
+
+        <p class = "para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid accusamus laudantium, consectetur rerum
+            minima quos similique et incidunt sequi neque ipsam, autem vitae debitis obcaecati, dolorem corrupti error
+            perferendis facere. Fuga eum id quasi repellat voluptates recusandae consequatur natus quod libero, est iste
+            consectetur earum cum impedit, praesentium a alias aliquam provident voluptatem saepe cumque. Eius eligendi
+            assumenda modi consequuntur deleniti earum voluptatibus maiores accusamus velit unde? In, sed
+            exercitationem! Odio blanditiis nostrum numquam et dolorum perferendis consequuntur consequatur rerum. Nulla
+            dolorem expedita, cum numquam hic ad? Tempore minima itaque porro assumenda hic at, maiores aut fuga id
+            beatae aspernatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore delectus odio repudiandae
+            libero explicabo temporibus aliquam fugiat accusamus! At provident magni aut eaque soluta sapiente quisquam
+            velit, autem expedita voluptas iusto? Aspernatur, voluptatibus labore. Esse quas quasi nemo iste voluptatem
+            animi similique nostrum saepe natus ab dolor fugit sed aut eveniet voluptates a, laborum tempora doloribus
+            porro numquam quaerat illum neque dignissimos fuga. Temporibus quibusdam maxime nulla architecto
+            perspiciatis assumenda cumque quisquam numquam, ipsum illo saepe dolores alias et aut? Eaque facilis,
+            deleniti porro animi dignissimos ipsum dicta illo obcaecati mollitia, ducimus sint neque aut inventore. Rem
+            soluta molestias asperiores!
+
+        </p>
+
+    </div>
+
+    <div id="story" class = 'box'>
+
+        <h3 class="heading">OUR STORY</h3>
+        <div class="image_div">
+
+            <img src="{{url_for('static', filename = 'all_pics/group_photo.jpg' )}}" alt="" class="image">
+        </div>
+
+        <p class = "para">
+
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores ducimus nam voluptatibus animi corporis
+            illo sint excepturi, nemo aperiam. Eveniet dicta perspiciatis aliquid impedit similique soluta quia ea
+            maiores placeat illo natus quod iste ut eos, tempore nostrum error pariatur quidem et. Reprehenderit natus
+            totam adipisci cum sunt, consequuntur voluptatibus praesentium aspernatur corrupti doloremque, voluptate
+            beatae deleniti atque voluptas, dignissimos repudiandae! Veritatis ipsa accusamus nemo dicta in voluptatem
+            error corporis autem cum, veniam facilis maxime tempora cupiditate voluptas aut cumque expedita? Aperiam
+            ipsam minus aut ad corporis obcaecati maxime dolorem dolores voluptatum, at, odio error quos sapiente
+            eligendi distinctio suscipit sit praesentium delectus hic eveniet pariatur laudantium. Cumque expedita
+            nostrum soluta dicta rerum reiciendis! Optio magni atque cum vero voluptatibus blanditiis provident nam
+            quia, rerum harum exercitationem architecto laboriosam saepe animi nemo sunt reiciendis quae numquam?
+            Delectus fuga quasi reiciendis doloremque itaque corrupti eius provident explicabo repellendus dolorum
+            asperiores minus, et soluta consectetur deserunt nam unde labore eos! Quibusdam, et nobis odio a doloremque
+            aliquam non! Vitae ducimus, libero itaque eius facere impedit earum nisi illum quaerat quia alias magni
+            quidem ullam beatae perferendis veniam accusamus voluptate doloribus aperiam in non. Adipisci corrupti
+            nesciunt necessitatibus, expedita provident inventore maxime eum.
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>

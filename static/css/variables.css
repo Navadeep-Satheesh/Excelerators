@@ -1,0 +1,12 @@
+:root{
+    --background: rgb(0, 0, 0);
+    --heading: red;
+    --font1: 'Ubuntu'   ;
+    /* --font1: sans-serif   ; */
+    
+}
+
+p{
+    letter-spacing: 2px;
+}
+

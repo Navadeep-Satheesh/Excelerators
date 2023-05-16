@@ -1,0 +1,33 @@
+{% macro navbar() %}
+
+    
+    <div id="navbar">
+    
+    
+    
+            <button id="show_navbar">show</button>
+    
+            <div id="navbar_logo"> <img src="{{ url_for('static' , filename = 'res/logo.png') }}" alt="logo"> </div>
+    
+            
+    
+            <div id="links">
+    
+                <button id="close_navbar_links">close</button>
+    
+                <ul>
+                    <li> <a href="/">HOME</a> </li>
+                    <li> <a href="/about_us">ABOUT US</a> </li>
+                    <li> <a href="/projects">PROJECTS</a> </li>
+                    <li> <a href="/members">TEAM</a> </li>
+                    <li> <a href="/achievements">SPONSERS</a> </li>
+                    <li> <a href="/sponsers">GALLERY</a> </li>
+                </ul>
+    
+            </div>
+    
+        </div>
+
+        <script src="{{ url_for('static' , filename = 'js/navbar.js' ) }}"></script>
+
+{% endmacro %}

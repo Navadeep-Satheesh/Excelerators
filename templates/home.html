@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% from 'common.html' import common %}
+    {{common()}}
+
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/home.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/variables.css' ) }}">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/member_card.css') }}"> -->
+    <!-- <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/project_card.css') }}"> -->
+
+    <title>Excelarators</title>
+</head>
+
+
+
+{% from 'navbar.html' import navbar %}
+{% from 'member_card.html' import member_card %}
+{% from 'project_card.html' import project_card %}
+{{ navbar() }}
+
+<div id="loader">
+
+    <h3>AIM ASPIRE ACHIEVE</h3>
+
+    <div id="progressBarBg">
+        <div id="progressbar"></div>
+    </div>
+
+
+
+
+</div>
+
+<div id="top_portion" class="section">
+
+
+
+    <div id="image_slide_show">
+
+
+        <div id="images">
+
+            <div id="image1" class="image_slide_show_image"></div>
+            <div id="image2" class="image_slide_show_image"></div>
+            <div id="image3" class="image_slide_show_image"></div>
+            <div id="image4" class="image_slide_show_image"></div>
+            <div id="image1" class="image_slide_show_image"></div>
+        </div>
+
+
+    </div>
+    <div id="black_overlay"></div>
+
+    <div id="above_image_box">
+
+        <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">EXCELERATORS CET</h1>
+        <h3 data-aos="fade-down" data-aos-duration="1000" data-aos-once="true">Aim Aspire Achieve</h3>
+        <a href="/projects" id="view_projects">VIEW PROJECTS</a>
+
+    </div>
+
+
+</div>
+
+
+<div id="about_us" class="section">
+
+    <h3 class="title">ABOUT US</h3>
+
+    <div class="about_us_inner">
+
+        <p data-aos="fade-left" data-aos-duration="1000">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati nihil nam aperiam, recusandae sint
+            totam accusantium illo tempore quas natus expedita officia in magnam illum quis est minus ratione quo dolor
+            velit, hic nulla? Itaque, consequatur neque. Magnam magni ipsum quod architecto? Aperiam, dolor? Consequatur
+            pariatur asperiores sapiente natus, fugit quos iste facere vitae optio similique facilis tempore ipsa autem
+            reiciendis debitis. Alias excepturi assumenda quisquam quo molestias quidem quibusdam recusandae at
+            consectetur,
+            nulla voluptates officia quia architecto earum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Amet
+            minus veritatis nihil nisi illum aliquam mollitia, voluptatem laborum nulla alias.
+        </p>
+
+        <img src="/static/all_pics/practice.jpg" alt="">
+    </div>
+
+</div>
+
+<div id="projects" class="section">
+
+    <h2>PROJECTS</h2>
+
+    <div class="projectGrid">
+
+        {% for project in projects %}
+
+        <div class="singleProject" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+
+            <div class="project_black_ovelay"></div>
+
+            <img src="/static/all_pics/{{project[2]}}" alt="">
+
+            <h3 class="title">{{project[1].upper()}}</h3>
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+
+</div>
+
+
+<div id="members" class="section">
+
+    <h2 class="title">TEAM</h2>
+
+    <div class="members_grid">
+
+
+        {% for member in members[:9] %}
+
+        <div class="singleMember" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+
+            <div class="profile_pic">
+                <img src="" alt="">
+
+            </div>
+
+            <div class="details">
+                <h3>name department</h3>
+                <h3>position</h3>
+
+            </div>
+
+
+        </div>
+
+        {% endfor %}
+
+
+    </div>
+
+    <a href="" class="show_more">SHOW MORE</a>
+</div>
+
+<div id="sponsers" class="section">
+
+    <h3 class="title">SPONSERS</h3>
+
+    <div class="sponsers_grid">
+
+        {% for sponser in sponsers %}
+
+        <div class="single_sponser" data-aos="fade-up" duration="1500" data-aos-once="true">
+
+            <div class="image">
+                <img src="" alt="">
+            </div>
+
+            <div class="sponser_details">
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+</div>
+
+
+<script src="{{ url_for('static' , filename = 'js/home.js')  }}"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+
+</html>

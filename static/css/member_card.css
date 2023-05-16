@@ -1,0 +1,47 @@
+.single_member{
+    height: 40vh;
+    /* width: 20vh; */
+    background-color: rgb(58, 58, 58);
+    color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin: 20px  ;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    padding: 5px 10px ;
+
+}
+
+.profile_pic {
+    
+    width: 80%;
+    height: auto ;
+    border: 2px solid red;
+
+    width: 250px;
+    height: 250px ;
+
+    margin-top: 30px;
+
+    /* height: same-as-width; */
+    /* margin: auto; */
+    border-radius: 100%;
+    background-color: rgb(41, 41, 41);
+}
+
+.details{
+    
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+.details *{
+    margin: 8px;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.name{
+    color: red;
+
+}
