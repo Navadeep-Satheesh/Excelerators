@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 completed = [
      [ 1,  "ebike 2021", "ebike20222.jpg"],
-     [ 2, "gokart 2022", "image3.jpg"],
+    #  [ 2, "gokart 2022", "image3.jpg"],
+     [ 2, "gokart 2022", "gokart20212.jpg"],
      [3,  "gokart 2021" , "gokart20211.jpg"]
  ]
 
