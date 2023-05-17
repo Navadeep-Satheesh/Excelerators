@@ -59,12 +59,13 @@ h1{
 
 
 .members_grid{
-    /* background-color: blue; */
+    background-color: black;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     padding: 50px 0px;
+    
     
 }
 
@@ -73,6 +74,7 @@ h1{
     transition: 1s;
     display: none;
     position: absolute;
+
 }
 
 #members{
@@ -103,6 +105,8 @@ h1{
     margin: 10px;
     background-color: rgb(245, 245, 245);
     /* background-color: rgb(86, 86, 86); */
+    background-color: rgb(28, 28, 28) ;
+    color: white;
 }
 
 .profile_pic{

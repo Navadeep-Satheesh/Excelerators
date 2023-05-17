@@ -1,9 +1,12 @@
 from flask import Flask , render_template
 import os , sys 
+import json 
 
 
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+links = json.load(open("links.json" ))
+print(links)
 
 app = Flask(__name__)
 
@@ -35,8 +38,16 @@ def sponsers():
     return render_template("sponsers.html")
 
 @app.route("/about_us")
-def about_of():
+def about_us():
     return render_template("about_us.html")
+
+
+@app.route("/gallery")
+def gallery():
+
+    gallery_images = links['gallery_images']
+    return render_template("gallery.html", gallery_images = gallery_images)
+
 
     
 if __name__ == "__main__":

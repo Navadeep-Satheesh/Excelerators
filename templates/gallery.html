@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{  url_for('static' , filename = '/css/navbar.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static' , filename = '/css/common.css') }}"> -->
+    <link rel="stylesheet" href="{{ url_for('static' , filename = '/css/gallery.css') }}">
+    
+    <title>Document</title>
+</head>
+<body>
+
+    
+    
+    
+
+    {% from 'navbar.html' import navbar %}
+    {{ navbar() }}
+
+    <div id="all_black"></div>
+    <div id="imageViewer">
+
+        <button id="close">  <img src="{{ url_for('static' , filename = 'res/close.png') }}" alt=""> </button>
+
+        <button id="previous" class = "imagechange"><img src="{{ url_for('static' , filename = 'res/left_arrow.png') }}" alt=""></button>
+        <img src="" alt="" id="imageViewerImage">
+        <button id="next" class = "imagechange"><img src="{{ url_for('static' , filename = 'res/right_arrow.png') }}" alt=""></button>
+
+
+    </div>
+
+   
+
+    <h1>GALLERY</h1>
+
+    <div id="image_grid">
+
+        {% for image in gallery_images %}
+
+        <div class = "singleImage">
+
+            <img src="{{image}}" alt="image">
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <script src = "{{ url_for('static' , filename = '/js/gallery.js' ) }}" ></script>
+    
+</body>
+</html>
