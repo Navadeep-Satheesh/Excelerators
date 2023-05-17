@@ -628,19 +628,19 @@ body{
 
 @media(  max-width: 100vh ){
 
-    #links{
-        display: none;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100vh;
-        width: 50vw;
-    
-    }
+    /* #links{ */
+        /* display: none; */
+        /* position: absolute; */
+        /* top: 0px; */
+        /* left: 0px; */
+        /* height: 100vh; */
+        /* width: 50vw; */
+/*      */
+    /* } */
 
-    #links ul{
-        flex-direction: column;
-    }
+    /* #links ul{ */
+        /* flex-direction: column; */
+    /* } */
 
     #show_navbar{
         display: inline;
@@ -680,6 +680,13 @@ body{
 
     #about_us p{
         width: 100%;
+        margin: 30px;
+    }
+
+    .about_us_inner{
+        display: flex;
+        flex-direction: column-reverse;
+        /* background-color: green; */
     }
 
     .singleMember{

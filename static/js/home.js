@@ -36,35 +36,35 @@ const projects_front = document.getElementById("projects_front");
 const membersStrip = document.getElementById("allmembers");
 const projectsStrip = document.getElementById("allprojects");
 
-membersStrip.style.left = "0vw";
+// membersStrip.style.left = "0vw";
 
-members_back.addEventListener("click" , ()=>{
-
-    console.log("moving back")
-
-    if(parseInt(membersStrip.style.left.slice(0, -2)) < 0 ){
-        membersStrip.style.left = `${parseInt( membersStrip.style.left.slice(0,-2))  + 100}vw`;
-        console.log(membersStrip.style.left);
-    }
-    
-})
-
-members_front.addEventListener("click" , ()=>{
-
-    console.log("moving front");
-
-    var members = membersStrip.getElementsByClassName("single_member");
-
-    console.log(parseInt(membersStrip.style.left.slice(0, -2) ))  ;
-    console.log(-(members.length* 100));
-
-    if(parseInt(membersStrip.style.left.slice(0, -2)) > -(members.length* 100) ){
-        membersStrip.style.left = `${parseInt( membersStrip.style.left.slice(0,-2))  - 80}vw`;
-        console.log(membersStrip.style.left);   
-    }
-    
-})
-
+// members_back.addEventListener("click" , ()=>{
+// 
+    // console.log("moving back")
+// 
+    // if(parseInt(membersStrip.style.left.slice(0, -2)) < 0 ){
+        // membersStrip.style.left = `${parseInt( membersStrip.style.left.slice(0,-2))  + 100}vw`;
+        // console.log(membersStrip.style.left);
+    // }
+    // 
+// })
+// 
+// members_front.addEventListener("click" , ()=>{
+// 
+    // console.log("moving front");
+// 
+    // var members = membersStrip.getElementsByClassName("single_member");
+// 
+    // console.log(parseInt(membersStrip.style.left.slice(0, -2) ))  ;
+    // console.log(-(members.length* 100));
+// 
+    // if(parseInt(membersStrip.style.left.slice(0, -2)) > -(members.length* 100) ){
+        // membersStrip.style.left = `${parseInt( membersStrip.style.left.slice(0,-2))  - 80}vw`;
+        // console.log(membersStrip.style.left);   
+    // }
+    // 
+// })
+// 
 
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll" , ()=> {

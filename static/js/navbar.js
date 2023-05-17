@@ -8,7 +8,9 @@ const show_navbar_links = document.getElementById("show_navbar");
 
 show_navbar_links.addEventListener("click" , ()=>{
 
-    navbar_links.style.display = "inline";
+    navbar_links.style.left = "0vw";
+    console.log(navbar_links.style.display)
+    // navbar_links.style.display = "inline"
 
 })
 
