@@ -24,6 +24,7 @@ body{
     width: 100vw;
     background-color: black;
     z-index: 101;
+    transition: 0.5s;
     animation-name: loader;
     animation-duration: 3s;
     animation-fill-mode: forwards;
@@ -68,7 +69,7 @@ body{
     background-color: white;
     background-color: rgb(255, 23, 23);
     animation-name: loaderProgressBar  ;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
     
 }

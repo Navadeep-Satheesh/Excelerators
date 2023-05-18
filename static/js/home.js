@@ -10,7 +10,7 @@ const image_slider = document.getElementById("images");
 const loader = document.getElementById("loader");
 setTimeout( ()=>{
     loader.style.display = "none";
-}, 100)
+}, 1500)
 
 
 var current_image = 0;

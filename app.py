@@ -36,7 +36,7 @@ def projects():
 
 @app.route("/sponsers")
 def sponsers():
-    return render_template("sponsers.html")
+    return render_template("sponsers.html", sponsers = [0]*9)
 
 @app.route("/about_us")
 def about_us():
