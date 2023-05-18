@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/navbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/home.css' ) }}">
     <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/variables.css' ) }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static' , filename = 'css/gallery.css' ) }}"> -->
 
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/member_card.css') }}"> -->
@@ -79,20 +80,18 @@
 
     <div class="about_us_inner">
 
-        <p data-aos="fade-left" data-aos-duration="1000"  data-aos-once="true">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum obcaecati nihil nam aperiam, recusandae sint
-            totam accusantium illo tempore quas natus expedita officia in magnam illum quis est minus ratione quo dolor
-            velit, hic nulla? Itaque, consequatur neque. Magnam magni ipsum quod architecto? Aperiam, dolor? Consequatur
-            pariatur asperiores sapiente natus, fugit quos iste facere vitae optio similique facilis tempore ipsa autem
-            reiciendis debitis. Alias excepturi assumenda quisquam quo molestias quidem quibusdam recusandae at
-            consectetur,
-            nulla voluptates officia quia architecto earum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Amet
-            minus veritatis nihil nisi illum aliquam mollitia, voluptatem laborum nulla alias.
+        <p data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
+
+            Excelerators CET a  motor sports  team of College of Engineering Trivandrum.
+            We focus on building gokarts and ebikes for various events and competitions
+            and other projects for the welfare the college and society.The team is 
+            powers by group of young minds inspired to reach great heights 
         </p>
 
         <img src="/static/all_pics/practice.jpg" alt="">
     </div>
+
+    <a href="/about_us" class="show_more more_about_us">SHOW MORE</a>
 
 </div>
 
@@ -117,6 +116,8 @@
 
 
     </div>
+
+    <a href="/projects" class="show_more more_projects">SHOW MORE</a>
 
 </div>
 
@@ -151,7 +152,7 @@
 
     </div>
 
-    <a href="" class="show_more">SHOW MORE</a>
+    <a href="/members" class="show_more more_members">SHOW MORE</a>
 </div>
 
 <div id="sponsers" class="section">
@@ -177,10 +178,33 @@
         {% endfor %}
 
     </div>
+
+    <a href="/sponsers" class="show_more more_sponsers">SHOW MORE</a>
 </div>
 
 
+
+<div id="gallery"  class="section">
+
+    <h1 class="title">GALLERY</h1>
+
+    <div id="image_grid">
+        {% for image in gallery_images %}
+        <div class="singleImage">
+            <img src="{{image}}" alt="image">
+        </div>
+        {% endfor %}
+    </div>
+
+    <a href="/sponsers" class="show_more more_pictures">SHOW MORE</a>
+
+</div>
+
+
+
+
 <script src="{{ url_for('static' , filename = 'js/home.js')  }}"></script>
+<script src="{{ url_for('static' , filename = '/js/gallery.js' ) }}"></script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

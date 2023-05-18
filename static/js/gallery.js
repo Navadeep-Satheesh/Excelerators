@@ -4,6 +4,13 @@ const all_black = document.getElementById("all_black");
 
 const image = document.querySelector("#imageViewerImage");
 
+
+const links = document.getElementById("links");
+const show_navbar = document.getElementById("show_navbar");
+
+links.remove();
+show_navbar.remove();
+
 var current_image; 
 
 

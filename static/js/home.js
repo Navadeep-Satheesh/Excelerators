@@ -1,4 +1,10 @@
 
+const go_to_home =  document.getElementById("go_to_home");
+go_to_home.remove();
+
+document.getElementsByClassName("empty")[0].remove();
+
+
 const image_slider = document.getElementById("images");
 
 const loader = document.getElementById("loader");
@@ -69,13 +75,13 @@ const projectsStrip = document.getElementById("allprojects");
 const navbar = document.getElementById("navbar");
 const links = document.getElementById("links");
 window.addEventListener("scroll" , ()=> {
-    console.log(window.scrollY );
+    // console.log(window.scrollY );
    
         
 
             
             if(window.scrollY    > window.innerHeight/2){
-                console.log("changing background color")
+               
 
 
                 navbar.style.backgroundColor = "black";
@@ -97,3 +103,45 @@ window.addEventListener("scroll" , ()=> {
             
         
     })
+
+
+
+
+const link_to_div = {
+    
+    "about_us_link": "about_us" ,
+    "projects_link" : "projects" ,
+    "members_link":  "members" ,
+    "sponsers_link": "sponsers" ,
+    "gallery_link" : "gallery"
+}
+
+
+const all_links = links.getElementsByClassName("link")
+console.log(all_links)
+
+
+document.querySelector(".home_link").addEventListener("click" , ()=>{
+    scroll({top : 0, behavior: "smooth"})
+})
+
+Array.from(all_links).forEach((link)=>{
+
+    link.addEventListener("click" , (event)=>{
+
+        event.preventDefault();
+
+        console.log( link_to_div[link.classList[1]] )
+       
+
+        var distance  = document.getElementById( link_to_div[link.classList[1]] ).getBoundingClientRect().top;
+        console.log(distance)
+        scroll({top :  window.scrollY + distance - innerHeight/11 , behavior: "smooth"})
+        
+        console.log(link.classList);
+        
+
+    })
+
+
+})

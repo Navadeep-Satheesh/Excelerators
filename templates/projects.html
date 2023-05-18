@@ -14,6 +14,13 @@
 
 <body>
 
+    <script>
+        const links = document.getElementById("links");
+        const show_navbar = document.getElementById("show_navbar");
+        links.remove();
+        show_navbar.remove();
+    </script>
+
     {% from 'navbar.html' import navbar %}
     {% from 'project_card.html' import project_card %}
     {{ navbar() }}

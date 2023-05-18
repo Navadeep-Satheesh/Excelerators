@@ -11,8 +11,16 @@
 </head>
 <body>
 
+
     {% from 'navbar.html' import navbar %}
     {{ navbar() }}
+
+    <script>
+        const links = document.getElementById("links");
+        const show_navbar = document.getElementById("show_navbar");
+        links.remove();
+        show_navbar.remove();
+    </script>
     
 </body>
 </html>

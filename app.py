@@ -19,7 +19,8 @@ completed = [
 
 @app.route("/")
 def home():
-    return render_template("home.html" , projects = completed , members = [0]*20 , member_count = 13 , sponsers = [0]*9)
+    gallery_images = links['gallery_images'][:4]
+    return render_template("home.html" , projects = completed , members = [0]*20 , member_count = 13 , sponsers = [0]*9 , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():

@@ -18,14 +18,24 @@
     {% from 'member_card.html' import member_card %}
     {{ navbar() }}
 
-    <div id = "top_image">
 
-        
+    <script>
 
-        
+        const links = document.getElementById("links");
+        const show_navbar = document.getElementById("show_navbar");
+
+        links.remove();
+        show_navbar.remove();
+    </script>
+
+    <div id="top_image">
+
+
+
+
     </div>
-    
-    
+
+
     <h1>OUR TEAM</h1>
 
     <div id="execom_members" class="members">
@@ -34,21 +44,21 @@
 
 
         <div class="members_grid">
-        {% for member in execom_members %}
+            {% for member in execom_members %}
 
-        <div class="singleMember" data-aos ="fade-up" data-aos-duration="1000" data-aos-once="true">
-            <div class="profile_pic">
-                <img src="" alt="">
+            <div class="singleMember" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <div class="profile_pic">
+                    <img src="" alt="">
+                </div>
+                <div class="details">
+                    <h3>name department</h3>
+                    <h3>position</h3>
+                </div>
             </div>
-            <div class="details">
-                <h3>name department</h3>
-                <h3>position</h3>
-            </div>
-        </div>
 
-            
-        {% endfor %}
-            
+
+            {% endfor %}
+
         </div>
     </div>
 

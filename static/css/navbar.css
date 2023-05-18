@@ -7,19 +7,20 @@
 
 
 #navbar{
-    /* background-color: black; */
-    background-color: transparent    ;
+    background-color: black;
+    /* background-color: transparent    ; */
+    height: 10vh;
     width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: space-between;
     font-size: 20px;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 100;
-    background-color: black;
+    /* background-color: black; */
 }
 
 #links{
@@ -34,6 +35,10 @@
    
 }
 
+.empty{
+    width: 40px;
+}
+
 
 #links ul{
     display: flex;
@@ -43,6 +48,35 @@
     /* height: 100%; */
    
     
+}
+
+
+
+
+
+#go_to_home{
+
+    position: fixed;
+    /* margin-top: 20px; */
+
+    top: 20px;
+    left: 20px;
+
+    left: 20px;
+    width: 50px;
+    aspect-ratio: 1/1;
+    /* background-color: green; */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#go_to_home img {
+    /* padding: 30px; */
+    width: 80%;
+    height: 80%;
 }
 
 #links ul li{
@@ -117,21 +151,41 @@
 
 }
 
+.empty{
+    /* background-color: green; */
+    
+}
 
 #navbar_logo{
     
     height: 8vh;
-    margin-left: 50px;
+    /* margin-left: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
     /* border: 5px solid red; */
 }
 
 #navbar_logo img{
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
+    /* border: 1px solid red; */
 
 }
 
 @media(  max-width: 100vh ){
+
+    #navbar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .empty{
+        width: 40px;
+        height: 10px;
+    }
 
     #links{
         display: inline;
