@@ -10,6 +10,7 @@ body{
     position: relative;
     color: white;
     color: black;
+    width: 100vw;
 }
 
 
@@ -390,7 +391,7 @@ body{
     width: 100vw;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     min-height: 130vh;
     display: flex;
     flex-direction: column;
@@ -413,6 +414,7 @@ body{
     font-size: 20px;
     font-family: var(--font1);
     color: rgb(255, 255, 255);
+    /* background-color: blue; */
 
 
 }
@@ -425,6 +427,7 @@ body{
 
 .about_us_inner img{
     height: 70vh;
+
 }
 
 #projects{
@@ -475,6 +478,9 @@ body{
 
 .singleProject img{
     width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
     /* height: 100%; */
     transition: 1s;
 }
@@ -520,8 +526,10 @@ body{
 
 .members_grid{
     /* background-color: blue; */
-    display: flex;
-    flex-wrap: wrap;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(300px, 320px));
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
     padding: 50px 0px;
@@ -557,8 +565,9 @@ body{
 
 .singleMember{
 
-    width: 25vw;
-    height: 30vw;
+    /* width: 25vw; */
+    /* height: 50vh; */
+    aspect-ratio: 3/4;
     overflow: hidden;
     margin: 10px;
     background-color: rgb(245, 245, 245);
@@ -606,10 +615,12 @@ body{
 
 .sponsers_grid{
 
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* flex-wrap: wrap; */
     align-items: center;
     justify-content: center;
+    grid-template-columns: repeat(auto-fit ,minmax(300px, 320px));
+    width: 100vw;
    
 
     
@@ -617,8 +628,9 @@ body{
 }
 
 .single_sponser{
-    width: 25vw;
-    height: 30vw;
+    /* width: 25vw; */
+    /* height: 30vw; */
+    aspect-ratio: 3/4;
     background-color: rgb(247, 247, 247);
     margin: 10px;
 }
@@ -680,7 +692,11 @@ body{
 
     #about_us p{
         width: 100%;
-        margin: 30px;
+
+        margin: 30px ;
+
+        margin-left: 50%;
+        transform: translate(-50%);
     }
 
     .about_us_inner{
@@ -689,8 +705,14 @@ body{
         /* background-color: green; */
     }
 
+    .about_us_inner img{
+        height: 50vh;
+        object-fit: cover;
+    }
+
+
     .singleMember{
-        width: 80vw;
-        height: 100%;
+        /* width: 80vw; */
+        /* height: 100%; */
     }
 }

@@ -67,17 +67,33 @@ const projectsStrip = document.getElementById("allprojects");
 // 
 
 const navbar = document.getElementById("navbar");
+const links = document.getElementById("links");
 window.addEventListener("scroll" , ()=> {
     console.log(window.scrollY );
    
-
         
-        if(window.scrollY    > window.innerHeight/2){
-            console.log("changing background color")
-            navbar.style.backgroundColor = "black";
+
             
-        }else{
-            navbar.style.backgroundColor = "transparent";
-        }
-    
+            if(window.scrollY    > window.innerHeight/2){
+                console.log("changing background color")
+
+
+                navbar.style.backgroundColor = "black";
+                
+                if(window.innerHeight <= window.innerWidth){
+                    
+                    links.style.backgroundColor = "black";
+                }
+                
+            }else{
+                
+                navbar.style.backgroundColor = "transparent";
+                
+                if(window.innerHeight <= window.innerWidth){
+                    links.style.backgroundColor = "transparent"
+                }
+               
+            }
+            
+        
     })

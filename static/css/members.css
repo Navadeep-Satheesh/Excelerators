@@ -1,6 +1,7 @@
 
 body{
-    /* background-color: var(--background); */
+    background-color: var(--background);
+    overflow-x: hidden;
 }
 
 .navbar{
@@ -46,11 +47,14 @@ body{
 h1{
     color: white;
     font-family: sans-serif;
-    font-size: 3rem;
-    position: relative;
-    /* left: 50%; */
+    font-size: 3.5rem;
+    /* position: relative; */
+    margin-top: 40px;
+    width: 100%;
+    /* background-color: green; */
     text-align: center;
-    margin-top: 20vh;
+    /* text-align: center; */
+    /* margin-top: 20vh; */
     color: var(--heading);
     
 }
@@ -60,7 +64,8 @@ h1{
 
 .members_grid{
     background-color: black;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit ,minmax(300px, 320px));
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -99,8 +104,9 @@ h1{
 
 .singleMember{
 
-    width: 25vw;
-    height: 30vw;
+    /* width: 25vw; */
+    /* height: 40vh; */
+    aspect-ratio: 3/4;
     overflow: hidden;
     margin: 10px;
     background-color: rgb(245, 245, 245);
