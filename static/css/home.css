@@ -421,6 +421,7 @@ body{
 }
 #about_us p{
     width: 40%;
+    /* border: 2px solid blue; */
     margin: 10px auto;
     font-size: 20px;
     font-family: var(--font1);
@@ -436,6 +437,7 @@ body{
     width: 70vw;
     align-items: center;
     justify-content: center;
+    /* background-color: green; */
 }
 
 .about_us_inner img{
@@ -684,8 +686,6 @@ body{
 }
 
 
-
-
 #image_grid{
     margin-top: 100px;
     display: grid;
@@ -852,12 +852,15 @@ body{
     .about_us_inner{
         display: flex;
         flex-direction: column-reverse;
-        /* background-color: green; */
+        background-color: green;
+        align-items: flex-start;
+        justify-content: left;
     }
 
     .about_us_inner img{
         height: 50vh;
         object-fit: cover;
+        margin: auto;
     }
 
 
