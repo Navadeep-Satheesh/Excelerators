@@ -129,17 +129,17 @@
     <div class="members_grid">
 
 
-        {% for member in members[:9] %}
+        {% for member in members[:8] %}
 
         <div class="singleMember" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 
             <div class="profile_pic">
-                <img src="" alt="">
+                <img src="{{member[5]}}" alt="">
 
             </div>
 
             <div class="details">
-                <h3>name department</h3>
+                <h3>{{member[1]}} {{member[3]}} {{member[2]}}</h3>
                 <h3>position</h3>
 
             </div>

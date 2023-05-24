@@ -624,6 +624,10 @@ body{
     padding: 10px;
 }
 
+.profile_pic img{
+    width: 100%;
+    aspect-ratio: 1/1;
+}
 
 
 

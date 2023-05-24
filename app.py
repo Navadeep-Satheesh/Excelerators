@@ -1,9 +1,17 @@
 from flask import Flask , render_template
 import os , sys 
 import json 
+import csv
 
 
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+members_list = list(csv.reader(open("members.csv" , "r")))[1:]
+for item in members_list:
+    item[5] =   f"https://drive.google.com/uc?export=view&id={item[5].split('id=')[1]}"
+
+print(members_list)
+
 
 links = json.load(open("links.json" ))
 print(links)
@@ -20,14 +28,12 @@ completed = [
 @app.route("/")
 def home():
     gallery_images = links['gallery_images'][:4]
-    return render_template("home.html" , projects = completed , members = [0]*20 , member_count = 13 , sponsers = [0]*9 , gallery_images = gallery_images)
+    return render_template("home.html" , projects = completed , members = members_list , member_count = 13 , sponsers = [0]*9 , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():
 
-    execom_members = [0]*20
-    normal_members = [1,2,3,4]
-    return render_template("members.html" , execom_members = execom_members)
+    return render_template("members.html" , members = members_list)
 
 @app.route("/projects")
 def projects():
@@ -52,4 +58,4 @@ def gallery():
 
     
 if __name__ == "__main__":
-    app.run(debug=True , host = "192.168.29.52")
+    app.run(debug=True )
