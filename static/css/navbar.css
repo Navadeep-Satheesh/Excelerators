@@ -158,12 +158,12 @@
 
 #navbar_logo{
     
-    height: 8vh;
+    height: 10vh;
     /* margin-left: 50px; */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
+    /* background-color: red; */
     /* border: 5px solid red; */
 }
 
@@ -200,6 +200,8 @@
         width: 50vw;
         z-index: 100;
         background-color: black;
+        /* border: 2px solid red; */
+        
     
     }
 

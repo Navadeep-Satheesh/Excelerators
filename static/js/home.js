@@ -75,8 +75,8 @@ const projectsStrip = document.getElementById("allprojects");
 const navbar = document.getElementById("navbar");
 const links = document.getElementById("links");
 window.addEventListener("scroll" , ()=> {
-    // console.log(window.scrollY );
-   
+ 
+ 
         
 
             
@@ -86,17 +86,24 @@ window.addEventListener("scroll" , ()=> {
 
                 navbar.style.backgroundColor = "black";
                 
-                if(window.innerHeight <= window.innerWidth){
-                    
-                    links.style.backgroundColor = "black";
-                }
+                // if(window.innerHeight <= window.innerWidth){
+                    // console.log("black")
+                    // links.style.backgroundColor = "black";
+                // }else{
+                    // links.style.background
+                // }
+
+                links.style.backgroundColor = "black";
                 
             }else{
                 
                 navbar.style.backgroundColor = "transparent";
                 
                 if(window.innerHeight <= window.innerWidth){
-                    links.style.backgroundColor = "transparent"
+                    console.log("transparent")
+                    links.style.backgroundColor = "transparent";
+                }else{
+                    links.style.backgroundColor = "black";
                 }
                
             }

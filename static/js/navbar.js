@@ -17,7 +17,7 @@ show_navbar_links.addEventListener("click" , (event)=>{
     if(show_navbar_links.contains(event.target)){
 
         if(!navbar_links_visible){
-            console.log(1)
+            
             navbar_links.style.left = "0vw";
             window.navbar_links_visible =  true;
 
@@ -38,12 +38,6 @@ show_navbar_links.addEventListener("click" , (event)=>{
         bar1.classList.toggle("bar1_close")
         bar2.classList.toggle("bar2_close")
         bar3.classList.toggle("bar3_close")
-            
-
-       
-       
-       
-
         // navbar_links.style.left = "0vw";
 
         console.log(navbar_links.classList);
@@ -51,7 +45,6 @@ show_navbar_links.addEventListener("click" , (event)=>{
      
     }
     
-
     // navbar_links.style.display = "inline"
 
 })

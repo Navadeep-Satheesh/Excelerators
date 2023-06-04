@@ -78,7 +78,7 @@ body{
     background-color: transparent;
 }
 #links{
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 @keyframes loader{
@@ -856,7 +856,7 @@ body{
     .about_us_inner{
         display: flex;
         flex-direction: column-reverse;
-        background-color: green;
+        /* background-color: green; */
         align-items: flex-start;
         justify-content: left;
     }
