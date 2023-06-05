@@ -18,6 +18,7 @@ print(links)
 
 app = Flask(__name__)
 
+
 completed = [
      [ 1,  "ebike 2021", "ebike20221.jpg"],
      [ 2, "gokart 2022", "image3.jpg"],
