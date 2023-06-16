@@ -26,10 +26,18 @@
     <div id="sponsers_grid">
 
 
-        {% for sponser in sponsers%}
+        {% for sponser in sponsers %}
 
         <div class="singleSponser">
 
+            <div class="singleSponser">
+
+                <div class="imageDiv">
+                    <img src="static/res/sponsers_logo/{{sponser[1]}}" alt="">
+                </div>
+                <h3 class = "sponser_title">{{sponser[0]}}</h3>
+
+            </div>
 
         </div>
 

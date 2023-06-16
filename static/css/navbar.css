@@ -7,7 +7,7 @@
 
 
 #navbar{
-    background-color: black;
+    background-color: transparent;
     /* background-color: transparent    ; */
     height: 10vh;
     width: 100vw;
@@ -25,7 +25,7 @@
 
 #links{
     list-style-type: none;
-    background-color: black;
+    background-color: transparent   ;
     /* background-color: transparent; */
     z-index: 100;
     margin-left: auto;

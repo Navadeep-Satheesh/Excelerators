@@ -6,6 +6,8 @@ import csv
 
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+sponsers_list = json.load(open("sponsers.json" ))["sponsers"]
+
 members_list = list(csv.reader(open("members.csv" , "r")))[1:]
 for item in members_list:
     item[5] =   f"https://drive.google.com/uc?export=view&id={item[5].split('id=')[1]}"
@@ -29,7 +31,7 @@ completed = [
 @app.route("/")
 def home():
     gallery_images = links['gallery_images'][:4]
-    return render_template("home.html" , projects = completed , members = members_list , member_count = 13 , sponsers = [0]*9 , gallery_images = gallery_images)
+    return render_template("home.html" , projects = completed , sponsers = sponsers_list ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():
@@ -43,7 +45,7 @@ def projects():
 
 @app.route("/sponsers")
 def sponsers():
-    return render_template("sponsers.html", sponsers = [0]*9)
+    return render_template("sponsers.html", sponsers = sponsers_list)
 
 @app.route("/about_us")
 def about_us():

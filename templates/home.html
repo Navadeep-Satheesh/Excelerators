@@ -159,19 +159,20 @@
 
     <h3 class="title">SPONSERS</h3>
 
-    <div class="sponsers_grid">
+    <div id="sponsers_grid">
 
         {% for sponser in sponsers %}
 
-        <div class="single_sponser" data-aos="fade-up" duration="1500" data-aos-once="true">
+        <div class="singleSponser" data-aos="fade-up" duration="1500" data-aos-once="true">
 
-            <div class="image">
-                <img src="" alt="">
-            </div>
-
-            <div class="sponser_details">
-
-            </div>
+          
+                <div class="singleSponser">
+                    <div class="imageDiv">
+                        <img src="static/res/sponsers_logo/{{sponser[1]}}" alt="">
+                    </div>
+                    <h3 class = "sponser_title">{{sponser[0]}}</h3>
+                </div>
+            
 
         </div>
 
