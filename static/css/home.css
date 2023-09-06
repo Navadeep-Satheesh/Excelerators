@@ -571,7 +571,7 @@ body{
     
 }
 
-.more_about_us , .more_projects , .more_pictures , .more_sponsers , .more_members{
+.more_about_us , .more_projects , .more_pictures , .more_sponsers , .more_members , .more_events{
 
     background-color: transparent;
     border: 3px solid white;
@@ -897,10 +897,15 @@ body{
 
 #events{
     padding: 200px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 
 .eventGrid{
+    width: 80vw;
     margin-top: 50px;
     display: grid;
     align-items: center;
@@ -909,13 +914,27 @@ body{
     grid-gap: 10px;
 }
 
-.singleEvent{
+.singleEventContainer{
     margin: 10px;
     height: 50vh;
-
-    
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
+
+.singleEvent{
+    
+}
+
+/* .singleEvent:hover{ */
+    /* transition: 0.5s; */
+    /* height: 110%; */
+    /* width: 110%; */
+/*      */
+/* } */
+
 
 .singleEvent img{
     height: 100%;

@@ -53,7 +53,7 @@ With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 a
 ]
 
 
-events  = [
+events_data  = [
      
      "blender.jpg",
      "inventor.jpg",
@@ -70,7 +70,7 @@ events  = [
 @app.route("/")
 def home():
     gallery_images = links['gallery_images'][:4]
-    return render_template("home.html" , projects = completed , sponsers = sponsers_list , events = events ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
+    return render_template("home.html" , projects = completed , sponsers = sponsers_list , events = events_data ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():
@@ -81,6 +81,10 @@ def members():
 def projects():
 
     return render_template("projects2.html" , completed = completed , upcoming = [])
+
+@app.route("/events")
+def events():
+    return render_template("events.html" , events =  events_data)
 
 @app.route("/sponsers")
 def sponsers():

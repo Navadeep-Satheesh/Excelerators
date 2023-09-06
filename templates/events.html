@@ -1,11 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/navbar.css') }}">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/global.css') }}">
+    <!-- <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/member_card.css') }}"> -->
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/variables.css') }}">
+    <link rel="stylesheet" href="{{  url_for('static' , filename = 'css/events.css') }}">
     <title>EVENTS</title>
 </head>
+
 <body>
-    
+
+    <h1 id = "mainHeading" >EVENTS</h1>
+
+    <!-- <h3 >PAST EVENTS</h3> -->
+    <div class="eventsGrid">
+
+        {% for event in events %}
+
+            <div class="eventContainer">
+
+                <div class="singleEvent">
+
+                    <img src="/static/all_pics/event_posters/{{event}}" alt="">
+
+                </div>
+
+            </div>
+
+
+        {% endfor %}
+
+    </div>
+
+
 </body>
+
 </html>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    
+
 
 
 
@@ -169,16 +169,23 @@
     <div class="eventGrid">
 
         {% for event in events %}
-        <div class="singleEvent" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
 
-            <img src = "/static/all_pics/event_posters/{{event}}" alt="image">
+        <div class="singleEventContainer">
 
+            <div class="singleEvent" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+
+
+
+                <img src="/static/all_pics/event_posters/{{event}}" alt="image">
+            </div>
         </div>
         {% endfor %}
-        
+
 
 
     </div>
+
+    <a href="/events" class="show_more more_events">SHOW MORE</a>
 
 </div>
 
@@ -308,15 +315,15 @@
 </div>
 
 
-<div id="footer" class = "section">
+<div id="footer" class="section">
 
-    <span class="footer_logo">  <img src="./static/res/logo.png" alt=""> </span>
-    <span class = "footer_title">EXCELERATORS CET</span>
+    <span class="footer_logo"> <img src="./static/res/logo.png" alt=""> </span>
+    <span class="footer_title">EXCELERATORS CET</span>
 
 </div>
 
 
-  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="{{ url_for('static' , filename = 'js/home.js')  }}"></script>
 <!-- <script src="{{ url_for('static' , filename = '/js/gallery.js' ) }}"></script> -->
