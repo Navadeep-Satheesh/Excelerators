@@ -50,15 +50,27 @@ With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 a
         """
  ] 
 
-
-
 ]
+
+
+events  = [
+     
+     "blender.jpg",
+     "inventor.jpg",
+     "linux_commands.jpg",
+     "premier_pro.jpg",
+     "ansys.jpg",
+ ]
+
+
+
+
 
 
 @app.route("/")
 def home():
     gallery_images = links['gallery_images'][:4]
-    return render_template("home.html" , projects = completed , sponsers = sponsers_list ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
+    return render_template("home.html" , projects = completed , sponsers = sponsers_list , events = events ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():

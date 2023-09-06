@@ -121,6 +121,20 @@ body{
     position: relative;
     top: 100vh;
     min-height: 100vh;
+    background-color: black;
+    color: white;
+}
+
+.section h2{
+
+    /* margin: 20px  auto;  */
+    /* margin-top: 30px; */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 36px;
+    font-weight: bold;
+
 }
 
 
@@ -879,6 +893,32 @@ body{
 
 #contacts * {
     color: white;
+}
+
+#events{
+    padding: 200px 0px;
+}
+
+
+.eventGrid{
+    margin-top: 50px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit , minmax(350px , 400px));
+    grid-gap: 10px;
+}
+
+.singleEvent{
+    margin: 10px;
+    height: 50vh;
+
+    
+    
+}
+
+.singleEvent img{
+    height: 100%;
 }
 
 
