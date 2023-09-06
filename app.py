@@ -22,11 +22,38 @@ app = Flask(__name__)
 
 
 completed = [
-     [ 1,  "ebike 2021", "ebike20221.jpg"],
-     [ 2, "gokart 2022", "image3.jpg"],
-    #  [ 2, "gokart 2022", "gokart20212.jpg"],
-     [3,  "gokart 2021" , "gokart20211.jpg"]
- ]
+
+     [ 1,  "ebike 2021", "ebike20221.jpg" ,
+    
+            """
+                Zephyr, our E-bike is like a pleasant breeze but built to last.
+                Our e-bike is meticulously crafted for safety, durability, and affordability through ethical engineering practices.
+                It had achieved overall AIR - 7 at ETWDC 2022.
+
+            """
+     ] ,
+
+      [ 2,  "Fuego F-15", "image3.jpg" ,
+    
+        """
+            ith unwavering enthusiasm, our team produced the Fuego F-15, aimed to be unbeatable in the track, as its name says. 
+            ith a compact and driver friendly design, our newest Go - Kart was indeed, majestic in the events, achieving an overall of AIR - 7 in FKDC Season 5, followed by an AIR - 1 in Cost, and AIR - 5 in Acceleration and Autocross.
+        """
+ ] ,
+
+  [ 3,  "Fuego 2.O", "gokart20211.jpg" ,
+    
+        """
+The fire was unleashed again, with a bigger and better force, as we launched our new Go-kart, the Fuego 2.0, 2 years after its predecessor. 
+With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 achieving a score of AIR - 10 and Kerala - 1. 
+
+        """
+ ] 
+
+
+
+]
+
 
 @app.route("/")
 def home():
