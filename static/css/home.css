@@ -477,13 +477,24 @@ body{
     width: min-content;
     padding: 80px 0px;
     
+    
     /* width: min-content; */
     /* width: 75%; */
+}
+
+.projects_container{
+    /* background-color: green; */
+}
+
+.projects_wrapper{
+    /* background-color: blue; */
 }
 
 .singleProject{
     width: 32vw;
     height: 24vw;
+    /* width: 500px; */
+    /* height: 300px; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -491,6 +502,12 @@ body{
     justify-content: center;
     border: 2px solid black;
     /* background-color: red; */
+}
+
+.swiper-slide{
+    background-color: red;
+    height: 400px;
+    width: 200px;
 }
 
 .singleProject img{
@@ -819,7 +836,86 @@ body{
     opacity: 0.5;
 }
 
+#contacts{
 
+    width: 100vw;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* width: max-content; */
+    height: max-content;
+
+}
+
+.contact_container{
+    background-color: rgb(75, 75, 75);
+    width: 40vw;
+    height: max-content;
+    padding: 5%;
+    background-color: rgb(57, 57, 57);
+    margin-top: 10%;
+    /* transform: translateY(-70%); */
+}
+
+.contact_container h2{
+    /* background-color: green; */
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+.contact_container a{
+    text-decoration: none;
+}
+
+
+
+#contacts table td{
+
+    padding: 10px;
+}
+
+
+#contacts * {
+    color: white;
+}
+
+
+
+#footer{
+    position: relative;
+    width: 100vw;
+    background-color: rgb(15, 15, 15);
+    min-height: 100px;
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+.footer_logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_title{
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 10px;
+
+}
+
+.footer_logo img{
+    height: 70%;
+    aspect-ratio: 1/1;
+    margin-left: 20px;
+    /* background-color: ; */
+}
 
 
 
@@ -904,3 +1000,8 @@ body{
         /* height: 100%; */
     }
 }
+
+
+
+
+

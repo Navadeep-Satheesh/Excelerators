@@ -120,7 +120,8 @@ const link_to_div = {
     "projects_link" : "projects" ,
     "members_link":  "members" ,
     "sponsers_link": "sponsers" ,
-    "gallery_link" : "gallery"
+    "gallery_link" : "gallery",
+    "contacts_link" : "contacts"
 }
 
 
@@ -152,3 +153,29 @@ Array.from(all_links).forEach((link)=>{
 
 
 })
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    slidesPerView: 2,
+    direction: 'horizontal',
+    loop: false,
+    grabCursor: true ,
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
+
+  console.log(swiper);
