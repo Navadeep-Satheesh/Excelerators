@@ -12,11 +12,9 @@ members_list = list(csv.reader(open("members.csv" , "r")))[1:]
 for item in members_list:
     item[5] =   f"https://drive.google.com/uc?export=view&id={item[5].split('id=')[1]}"
 
-print(members_list)
-
 
 links = json.load(open("links.json" ))
-print(links)
+
 
 app = Flask(__name__)
 
@@ -48,7 +46,19 @@ The fire was unleashed again, with a bigger and better force, as we launched our
 With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 achieving a score of AIR - 10 and Kerala - 1. 
 
         """
- ] 
+ ] ,
+
+ [
+   
+      4, "Satva" , "satva.jpg"  ,
+      
+        """
+        Sathva, a project dedicated to the betterment of society, it is lifting platform that empowers individuals with disabilities to access and exit the stage with ease
+        """
+      
+      
+      
+ ]
 
 ]
 
