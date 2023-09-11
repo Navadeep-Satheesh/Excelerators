@@ -121,7 +121,8 @@ const link_to_div = {
     "members_link":  "members" ,
     "sponsers_link": "sponsers" ,
     "gallery_link" : "gallery",
-    "contacts_link" : "contacts"
+    "contacts_link" : "contacts",
+    "evets_link" : "events"
 }
 
 
