@@ -122,7 +122,7 @@ const link_to_div = {
     "sponsers_link": "sponsers" ,
     "gallery_link" : "gallery",
     "contacts_link" : "contacts",
-    "evets_link" : "events"
+    "events_link" : "events"
 }
 
 
