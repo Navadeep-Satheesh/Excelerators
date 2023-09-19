@@ -95,7 +95,7 @@ So if you ever wanted to make a 3D version of yourself, now you can—just don't
 
      ],
      "inventor" : [
-            "inventor,"
+            "inventor",
             "AutoDesk Inventor" , 
             "inventor.jpg", 
             ""
@@ -142,7 +142,7 @@ def projects():
 
     return render_template("projects2.html" , completed = completed , upcoming = [])
 
-@app.route("/events")
+@app.route("/events/")
 def events():
     return render_template("events.html" , events =  events_data.values())
 
