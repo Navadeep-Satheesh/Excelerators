@@ -21,15 +21,19 @@
 
         {% for event in events %}
 
+        <a href="{{event[0]}}/" >
+
             <div class="eventContainer">
 
                 <div class="singleEvent">
 
-                    <img src="/static/all_pics/event_posters/{{event[1]}}" alt="image">
+                    <img src="/static/all_pics/event_posters/{{event[2]}}" alt="image">
 
                 </div>
 
             </div>
+
+        </a>
 
 
         {% endfor %}

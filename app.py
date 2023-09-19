@@ -67,6 +67,7 @@ events_data  = {
     
     "stock_market" : [
 
+            "stock_market",
             "STOCK MARKET",
             "stock_market.jpeg",
             """
@@ -76,11 +77,12 @@ events_data  = {
 Stock market is where investors buy and sell shares of companies.It's a set of exchanges where companies issue shares and other securities for trading
 
 Join the session to pave the way...✨
-            """
+            """,
+            "https://drive.google.com/file/d/16IWBq0TlT87m5lfl_wDljQip05vkLJcp/preview"
 
     ] ,
      "blender" : [
-
+            "blender",
             "Blender" , 
             "blender.jpg",
             """
@@ -93,27 +95,27 @@ So if you ever wanted to make a 3D version of yourself, now you can—just don't
 
      ],
      "inventor" : [
-
+            "inventor,"
             "AutoDesk Inventor" , 
             "inventor.jpg", 
             ""
 
      ],
      "linux_commands" : [
-
+            "linux_commands",
             "Basics of Linux Commands", 
             "linux_commands.jpg",
             ""
 
      ],
      "premier_pro": [
-         
+         "premier_pro",
          "Premier Pro",
          "premier_pro.jpg",
          ""
      ],
      "ansys" : [
-         
+        "ansys",
          "Ansys",
          "ansys.jpg",
          ""
@@ -144,7 +146,7 @@ def projects():
 def events():
     return render_template("events.html" , events =  events_data.values())
 
-@app.route("/events/<event>")
+@app.route("/events/<event>/")
 def singleEvent(event):
     return render_template("single_event.html" , details = events_data[event])
 
