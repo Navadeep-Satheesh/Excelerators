@@ -63,14 +63,62 @@ With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 a
 ]
 
 
-events_data  = [
-     
-     "blender.jpg",
-     "inventor.jpg",
-     "linux_commands.jpg",
-     "premier_pro.jpg",
-     "ansys.jpg",
- ]
+events_data  = {
+    
+    "stock_market" : [
+
+            "STOCK MARKET",
+            "stock_market.jpeg",
+            """
+                " Don't sit down and wait for the opportunities to come, get up and make them" 
+ -Madam C J Walker
+
+Stock market is where investors buy and sell shares of companies.It's a set of exchanges where companies issue shares and other securities for trading
+
+Join the session to pave the way...✨
+            """
+
+    ] ,
+     "blender" : [
+
+            "Blender" , 
+            "blender.jpg",
+            """
+"I think the work that they do and the style of 3D graphics is absolutely fabulous and I think it's a great brush to use for some stories." -Don Bluth
+
+Blender is a free and open-source 3D computer graphics software tool set used for creating animated films, visual effects, art etc. It is a powerful, versatile tool that enables users to bring their creative ideas to life.
+
+So if you ever wanted to make a 3D version of yourself, now you can—just don't forget to give your virtual self a good hair day!
+        """
+
+     ],
+     "inventor" : [
+
+            "AutoDesk Inventor" , 
+            "inventor.jpg", 
+            ""
+
+     ],
+     "linux_commands" : [
+
+            "Basics of Linux Commands", 
+            "linux_commands.jpg",
+            ""
+
+     ],
+     "premier_pro": [
+         
+         "Premier Pro",
+         "premier_pro.jpg",
+         ""
+     ],
+     "ansys" : [
+         
+         "Ansys",
+         "ansys.jpg",
+         ""
+     ]
+}
 
 
 
@@ -94,7 +142,11 @@ def projects():
 
 @app.route("/events")
 def events():
-    return render_template("events.html" , events =  events_data)
+    return render_template("events.html" , events =  events_data.values())
+
+@app.route("/events/<event>")
+def singleEvent(event):
+    return render_template("single_event.html" , details = events_data[event])
 
 @app.route("/sponsers")
 def sponsers():
