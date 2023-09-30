@@ -194,19 +194,19 @@ def solidworks():
 
         name = data.get("name")
         email = data.get("email")
-        phone = data.get("email")
+        phone = data.get("phone")
         year = data.get("year")
         department = data.get("department")
 
         image = request.files['image']
 
+        if( all(value != "" for value in [name , email , phone , year , department]) ):
 
+            file = open("data/events/solidworks/solidworks.csv", "a")
+            writer = csv.writer(file)
 
-        file = open("data/events/solidworks/solidworks.csv", "ab")
-        writer = csv.writer(file)
-
-        writer.writerow([name , email , phone , year , department, file.filename ])
-        file.save(f'/data/events/solidworks/screenshots/{file.filename}')
+            writer.writerow([name , email , phone , year , department, image.filename ])
+            image.save(f'./data/events/solidworks/screenshots/{image.filename}')
 
         return render_template("registration_thanks.html" )
     
