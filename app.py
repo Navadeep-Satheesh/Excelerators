@@ -2,7 +2,10 @@ from flask import Flask , render_template , request
 import os , sys 
 import json 
 import csv
+import pygsheets
 
+client = pygsheets.authorize(service_account_file="excelerators-400623-cd37b50cb245.json")
+print(client.spreadsheet_titles())
 
 
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -212,7 +215,7 @@ def solidworks():
     
     return render_template("event_register.html")
 
-    
+
 
 
     
