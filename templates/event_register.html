@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/event_register.css">
+    <title>event register</title>
+</head>
+
+<body>
+
+    <form method="POST" action="/events/solidworks" id = "form">
+        <div class="main">
+            <img class="poster" src="/static/all_pics/event_posters/solidworks_workshop.jpg" alt="image">
+
+
+            <div class="description">
+
+                <span>DATE: 30th September and 1st october</span>
+                <span>VENUE: Online</span>
+                <span>SESSION HANDLED BY: </span>
+                <span>TARGET AUDIENCE: can be participated by anyone</span>
+
+                <h4>PRE-REQUITIES FOR PARTICIPANTS: </h4>
+                <p>
+                    Lap spec- 8 GB RAM and intel i5 processor. <br>
+                    Download and install SolidWorks prior to the workshop. <br>
+                </p>
+
+
+                <!-- Download link: -->
+
+                <span>BENIFITS: Certificate worth KTU points, and can design using SolidWorks</span>
+
+                <p>
+                    The 2-day workshop covers the basics of SolidWorks like what it is and why it is used to advanced
+                    design
+                    using the software. Therefore, the workshop can be attended by anyone from people who do not know
+                    SolidWorks
+                    to people who know already have exposure to the software.
+                </p>
+
+
+                <h3>FLOW OF EVENTS</h3>
+                <h4>DAY 1:</h4>
+
+                <p>
+                    What it is and why and where to use it <br>
+                    Basics of different tools <br>
+                    A small task using the tools taught <br>
+                </p>
+
+
+
+                <h4>DAY 2:</h4>
+
+                <p>
+                    Starts the advanced designing <br>
+                    Task of advance usage of SolidWorks- competition. <br>
+                    The winner of the competition conducted will be awarded. <br>
+
+                </p>
+
+            </div>
+
+            <div class="question">
+                <input type="text" class="name" placeholder="full name">
+            </div>
+
+            <div class="question">
+                <input type="text" class="email" placeholder="email">
+            </div>
+            <div class="question">
+                <input type="text" class="phone" placeholder="phone">
+            </div>
+            <div class="question select">
+                <select class="year_of_study">
+
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+
+            <div class="question select ">
+                <select class="department" name="department">
+                    <option value="mech">MECH</option>
+                    <option value="eee">EEE</option>
+                    <option value="cse">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="CE">CE</option>
+                    <option value="AE">AE</option>
+                </select>
+            </div>
+
+            <div class="question college">
+                <input type="text" class="college" placeholder="college">
+            </div>
+
+
+            <div class="payment question">
+
+                <img src="/static/all_pics/qr_codes/solidworks.jpg" alt="qr">
+
+            </div>
+
+            <div class="payment_proof question">
+
+                <input type="file" class = "payment_screenshot" name = "image">
+            </div>
+
+            <div class="question">
+
+                <button class="submit">SUBMIT</button>
+
+            </div>
+
+
+
+
+        </div>
+    </form>
+
+    <script>
+
+        const submit_button = document.getElementsByClassName("submit")[0];
+        const form = document.getElementById("form");
+        // submit_button.addEventListener("click" , (event)=>{
+            // 
+            // event.preventDefault()
+// 
+            // let name = document.getElementsByClassName("name")[0].value;
+            // let email = document.getElementsByClassName("email")[0].value;
+            // let phone = document.getElementsByClassName("phone")[0].value;
+            // let department = document.getElementsByClassName("department")[0].value;
+            // let year = document.getElementsByClassName("year_of_study")[0].value;
+            // let screenshot = document.getElementsByClassName("payment_screenshot")[0].value;
+// 
+            // if (name !="" && email != "" && phone!="" &&  department != "" && year != "" && screenshot != "" ){
+                // form.submit()
+            // }
+// 
+        // })
+// 
+
+    </script>
+
+</body>
+
+</html>

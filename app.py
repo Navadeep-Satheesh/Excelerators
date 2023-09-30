@@ -1,7 +1,8 @@
-from flask import Flask , render_template
+from flask import Flask , render_template , request
 import os , sys 
 import json 
 import csv
+
 
 
 # sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -64,7 +65,26 @@ With its ergonomic design, our Go-Kart did a fantastic feat in IKC Virtuals'22 a
 
 
 events_data  = {
-    
+
+
+    "proteus":[
+
+            "proteus",
+            "Proteus",
+            "proteus.png",
+            """
+Learning is like rowing upstream: not to advance is a drop back 
+
+It's more than  fun to design some freaky electrical circuits. 
+
+ Proteus is a proprietary software tool suite used primarily for electronic design automation. The software is used mainly by electronic design engineers and technicians to create schematics and electronic prints for manufacturing printed circuit boards.
+
+Let's master the art of circuit designing ✨  
+
+            """
+
+    ]
+    ,
     "stock_market" : [
 
             "stock_market",
@@ -130,7 +150,7 @@ So if you ever wanted to make a 3D version of yourself, now you can—just don't
 @app.route("/")
 def home():
     gallery_images = links['gallery_images'][:4]
-    return render_template("home.html" , projects = completed , sponsers = sponsers_list , events = events_data ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
+    return render_template("home.html" , projects = completed , sponsers = sponsers_list , events = events_data.values() ,  members = members_list , member_count = 13  , gallery_images = gallery_images)
 
 @app.route("/members")
 def members():
@@ -164,6 +184,35 @@ def gallery():
 
     gallery_images = links['gallery_images']
     return render_template("gallery.html", gallery_images = gallery_images)
+
+@app.route("/events/solidworks", methods = ["GET" , "POST"])
+def solidworks():   
+
+    if request.method == "POST":
+
+        data = request.form
+
+        name = data.get("name")
+        email = data.get("email")
+        phone = data.get("email")
+        year = data.get("year")
+        department = data.get("department")
+
+        image = request.files['image']
+
+
+
+        file = open("data/events/solidworks/solidworks.csv", "ab")
+        writer = csv.writer(file)
+
+        writer.writerow([name , email , phone , year , department, file.filename ])
+        file.save(f'/data/events/solidworks/screenshots/{file.filename}')
+
+        return render_template("registration_thanks.html" )
+    
+    return render_template("event_register.html")
+
+    
 
 
     
