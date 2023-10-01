@@ -160,6 +160,15 @@ li{
     font-size: 18px;
 }
 
+.register_link{
+    background-color: rgb(166, 0, 0);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border: 0px;
+    font-size: 15px;
+}
+
 
 @media(max-width: 100vh){
     .main{
